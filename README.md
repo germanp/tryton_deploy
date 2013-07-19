@@ -54,7 +54,7 @@ Available commands:
  
 ## Detalles
 
-En el momento del deploy se crea un nuevo usuario lulamado "tryton",
+En el momento del deploy se crea un nuevo usuario llamado "tryton",
 en su directorio home se encuentran tres directorios:
     
     virtualenv/
