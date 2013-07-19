@@ -64,7 +64,7 @@ def virtualenv():
 
 def create_tryton_user():
     """Create aplication user"""
-    run('adduser %s' % env.app_user)
+    run('adduser -s /bin/false --disabled-password %s' % env.app_user)
 
 
 def create_app_dirs():
