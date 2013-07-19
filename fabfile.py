@@ -85,7 +85,7 @@ def create_virtualenv():
 def install_system_dependences():
     """Install apt-get based dependences"""
     run('apt-get -q update')
-    run('apt-get -q install %s' % ' '.join(system_dependences))
+    run('apt-get -q -y install %s' % ' '.join(system_dependences))
 
 
 @task
