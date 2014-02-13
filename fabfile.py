@@ -64,7 +64,7 @@ def virtualenv():
 
 def create_tryton_user():
     """Create aplication user"""
-    run('adduser %s' % env.app_user)
+    run('adduser -s /bin/false --disabled-password %s' % env.app_user)
 
 
 def create_app_dirs():
@@ -85,7 +85,7 @@ def create_virtualenv():
 def install_system_dependences():
     """Install apt-get based dependences"""
     run('apt-get -q update')
-    run('apt-get -q install %s' % ' '.join(system_dependences))
+    run('apt-get -q -y install %s' % ' '.join(system_dependences))
 
 
 @task
