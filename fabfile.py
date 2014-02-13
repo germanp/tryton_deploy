@@ -1,4 +1,4 @@
-#! -*- coding: utf8 -*-
+# -*- coding: utf8 -*-
 """
 Deployment script for tryton on ubuntu 12.04 LTS
 Theoretically it can work on any apt-get based GNU/Linux distro
@@ -64,7 +64,7 @@ def virtualenv():
 
 def create_tryton_user():
     """Create aplication user"""
-    run('adduser -s /bin/false --disabled-password %s' % env.app_user)
+    run('adduser --shell /bin/false --disabled-password %s' % env.app_user)
 
 
 def create_app_dirs():
